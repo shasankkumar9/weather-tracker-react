@@ -79,8 +79,6 @@ function Main({ currentWeather, weatherHistory, loading }) {
     },
   ];
 
-  console.log(currentWeather);
-
   if (loading) return <Loading />;
 
   if (Object.keys(currentWeather).length === 0)
