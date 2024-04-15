@@ -79,9 +79,16 @@ function Main({ currentWeather, weatherHistory, loading }) {
     },
   ];
 
-  console.log(topData);
+  console.log(currentWeather);
 
   if (loading) return <Loading />;
+
+  if (Object.keys(currentWeather).length === 0)
+    return (
+      <div className="w-full h-dvh flex justify-center items-center">
+        <h2 className="text-center">No Data</h2>
+      </div>
+    );
 
   return (
     <div>
